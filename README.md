@@ -2,7 +2,14 @@
 
 Virtual Store is an e-Commerce storefront application built with React and Redux. This project is divided into multiple phases, and this README covers Phase 1 of the project.
 
-## UML: ![alt text](img/UML.png)
+Day 1: 
+![alt text](image.png)
+
+
+### UML: 
+![alt text](img/UML.png)
+
+
 - App Component: Container for all sub-components.
 - Header Component: Displays the store name.
 - Footer Component: Displays copyright and contact information.
