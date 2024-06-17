@@ -1,9 +1,9 @@
 const initialState ={
     categoriesList:[
-      {name:'electronics',description:': Summer limited-time sales'},
+      {name:'Electronics',description:': Summer limited-time sales'},
       {name:'food',description:': fresh farm deliveries to your doorsteps'}
     ],
-    activeCategory:{name:'electronics',description:'multiple choice of the best Electronics brands'},
+    activeCategory:{name:'Electronics',description:'New arrivals'},
 }
 
 export default function categoriesReducer(state=initialState,action){

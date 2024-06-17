@@ -28,8 +28,8 @@ export default function DenseAppBar() {
           </Typography>
           <div style={{margin:'auto'}}>
             <PhoneIcon style={{padding:'10px 0 0 10px'}}/> hot-line-customer-service
-            <PinDropIcon style={{padding:'10px 0 0 10px'}} /> Salem,OR
             <ContactMailIcon style={{padding:'10px 0 0 10px'}}/> storefront-service@gmail.com
+            <PinDropIcon style={{padding:'10px 0 0 10px'}} /> Salem,OR & online
           </div>
         </Toolbar>
       </AppBar>

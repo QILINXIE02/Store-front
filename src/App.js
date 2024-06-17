@@ -14,10 +14,10 @@ import Collapse from '@material-ui/core/Collapse';
 const theme = createTheme({
   palette: {
     primary: {
-      main: 'rgb(0, 112, 153)',
+      main: 'hsl(50 90% 60%)',
     },
     secondary: {
-      main: '#ffcc80',
+      main: '#f0f8ff',
     },
   },
 });
