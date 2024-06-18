@@ -1,6 +1,7 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 const useStyles = makeStyles((theme) => ({
   title: {
@@ -14,11 +15,13 @@ function Header({ show }) {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Typography variant="h6" className={classes.title}>
-          Virtual Store
+        <Typography variant="h4" className={classes.title}>
+          Our Store <Typography variant="h5"> Browse our Categories </Typography>
         </Typography>
+
         <Button color="inherit" onClick={show}>Cart</Button>
-      </Toolbar>
+        <ShoppingCartIcon />
+        </Toolbar>
     </AppBar>
   );
 }

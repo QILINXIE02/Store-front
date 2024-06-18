@@ -1,7 +1,8 @@
+
 const initialState = {
     categoriesList: [
-      { name: 'Electronics', description: 'Summer limited-time sales' },
-      { name: 'Food', description: 'Fresh farm deliveries to your doorsteps' }
+      { name: 'Electronics', description: ': Summer limited-time sales' },
+      { name: 'Food', description: ': Fresh farm deliveries to your doorsteps' }
     ],
     activeCategory: { name: 'Electronics', description: 'New arrivals' }
   };

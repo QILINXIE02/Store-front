@@ -1,7 +1,9 @@
-import React from 'react';
+// src/components/Products.js
+
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { getCategoryItems } from '../products';
-import { addToCart } from '../cart';
+import { getCategoryItems, loadProducts } from '../products';
+import { addToCart } from '../cartActions';
 import { reduceInventory } from '../products';
 
 import { CardActionArea, CardActions, Card, CardContent, CardMedia, Button, Typography } from '@material-ui/core';
@@ -17,24 +19,27 @@ const useStyles = makeStyles({
     },
 });
 
-function Products(props) {
+function Products({ category, products, getCategoryItems, addToCart, reduceInventory }) {
     const classes = useStyles();
     const { enqueueSnackbar } = useSnackbar();
 
+    useEffect(() => {
+        getCategoryItems(category.name); // Fetch products for the current category
+    }, [category.name, getCategoryItems]); // Only re-run effect if category.name or getCategoryItems change
+
     function handleClick(element) {
-        props.addToCart(element);
-        props.reduceInventory(element);
-        props.getCategoryItems(props.category.name);
+        addToCart(element); // Dispatch addToCart action
+        reduceInventory(element); // Dispatch reduceInventory action
         enqueueSnackbar('Added to cart');
     }
 
     return (
         <div>
-            {props.products.activeProducts.map(element => (
-                <Card 
-                    key={element.name} 
-                    elevation={3} 
-                    className={classes.root} 
+            {products.activeProducts.map(element => (
+                <Card
+                    key={element.name}
+                    elevation={3}
+                    className={classes.root}
                     style={{
                         display: "inline-block",
                         marginLeft: '30px',
