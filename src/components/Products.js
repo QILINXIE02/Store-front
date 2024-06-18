@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { getCategoryItems, loadProducts } from '../products';
+import { getCategoryItems } from '../products';
 import { addToCart } from '../cartActions';
 import { reduceInventory } from '../products';
 

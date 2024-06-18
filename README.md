@@ -1,6 +1,8 @@
 # Virtual Store
+Virtual Store is an e-Commerce storefront application built with React and Redux. This project is divided into multiple phases.
 
-Virtual Store is an e-Commerce storefront application built with React and Redux. This project is divided into multiple phases, and this README covers Phase 1 of the project.
+Day 2: 
+![alt text](image-1.png)
 
 Day 1: 
 ![alt text](image.png)
