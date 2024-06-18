@@ -27,9 +27,9 @@ export default function DenseAppBar() {
            &copy;Qilin Xie 2024
           </Typography>
           <div style={{margin:'auto'}}>
-            <PhoneIcon style={{padding:'10px 0 0 10px'}}/> hot-line-customer-service
-            <ContactMailIcon style={{padding:'10px 0 0 10px'}}/> storefront-service@gmail.com
-            <PinDropIcon style={{padding:'10px 0 0 10px'}} /> Salem,OR & online
+            <PhoneIcon style={{padding:'10px 0 0 10px'}}/> (1) 503-123-4567
+            <ContactMailIcon style={{padding:'10px 0 0 10px'}}/> storefront@gmail.com
+            <PinDropIcon style={{padding:'10px 0 0 10px'}} /> Salem,OR
           </div>
         </Toolbar>
       </AppBar>
