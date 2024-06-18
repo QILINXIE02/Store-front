@@ -22,24 +22,22 @@ const theme = createTheme({
   },
 });
 function App() {
-  const [showCartList, setshowCartList] = useState(false)
+  const [showCartList, setshowCartList] = useState(false);
+
   function handleShow() {
     setshowCartList(!showCartList);
   }
- 
+
   return (
     <div>
       <ThemeProvider theme={theme}>
         <SnackbarProvider maxSnack={3}
-        anchorOrigin={{
-          vertical: 'top',
-          horizontal: 'left',
-          contrastText:"rgb(0, 0, 0)"
-          
-        }}
-        TransitionComponent={Collapse}
-        style={{backgroundColor:"rgba(255, 204, 128, 0.747) " ,color:'black', marginTop:"25px"}}
-      >
+          anchorOrigin={{
+            vertical: 'top',
+            horizontal: 'left',
+          }}
+          TransitionComponent={Collapse}
+        >
           <Header show={handleShow} />
           <Categories />
           {showCartList && <Cart />}
@@ -49,7 +47,6 @@ function App() {
       </ThemeProvider>
     </div>
   );
-
 }
 
 export default App;
