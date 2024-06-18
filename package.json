@@ -1,6 +1,6 @@
 {
   "engines": {
-    "node": "14.x"
+    "node": ">=16.20.2"
   },
   "name": "store-front",
   "version": "0.1.0",
