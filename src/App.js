@@ -1,5 +1,6 @@
 // src/App.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import Categories from './components/Categories';
 import Products from './components/Products';
 import Header from './components/Header';
@@ -11,43 +12,48 @@ import { SnackbarProvider } from 'notistack';
 import Collapse from '@material-ui/core/Collapse';
 
 const theme = createTheme({
-    palette: {
-        primary: {
-            main: '#a6e0d4',
-        },
-        secondary: {
-            main: '#f0f8ff',
-        },
+  palette: {
+    primary: {
+      main: '#a6e0d4',
     },
+    secondary: {
+      main: '#f0f8ff',
+    },
+  },
 });
 
 function App() {
-    const [showCartList, setShowCartList] = useState(false);
+  const [showCartList, setShowCartList] = useState(false);
+  const cartItems = useSelector(state => state.cart.cartItems);
 
-    const handleShow = () => {
-        setShowCartList(!showCartList);
-    };
+  useEffect(() => {
+    // Re-render component when cartItems changes
+  }, [cartItems]);
 
-    return (
-        <div>
-            <ThemeProvider theme={theme}>
-                <SnackbarProvider
-                    maxSnack={3}
-                    anchorOrigin={{
-                        vertical: 'top',
-                        horizontal: 'left',
-                    }}
-                    TransitionComponent={Collapse}
-                >
-                    <Header show={handleShow} />
-                    <Categories />
-                    {showCartList && <Cart />}
-                    <Products />
-                    <Footer />
-                </SnackbarProvider>
-            </ThemeProvider>
-        </div>
-    );
+  const handleShow = () => {
+    setShowCartList(!showCartList);
+  };
+
+  return (
+    <div>
+      <ThemeProvider theme={theme}>
+        <SnackbarProvider
+          maxSnack={3}
+          anchorOrigin={{
+            vertical: 'top',
+            horizontal: 'left',
+          }}
+          TransitionComponent={Collapse}
+        >
+          <Header show={handleShow} />
+          <Categories />
+          {showCartList && <Cart />}
+          <Products />
+          <Footer />
+        </SnackbarProvider>
+      </ThemeProvider>
+    </div>
+  );
 }
 
 export default App;
