@@ -1,5 +1,4 @@
 // src/components/Cart.js
-
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateQuantity, removeFromCart } from '../cartActions';
@@ -17,7 +16,7 @@ const Cart = () => {
   };
 
   return (
-    <div>
+    <div style={{ width: '300px', position: 'fixed', right: 0, top: '64px', border: '1px solid #ccc', padding: '10px', borderRadius: '5px', background: 'white' }}>
       <h2>Shopping Cart</h2>
       {cartItems.map(item => (
         <div key={item._id}>
