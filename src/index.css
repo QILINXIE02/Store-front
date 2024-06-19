@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(to right, #ffefba, #ffffff);
+  background: linear-gradient(to right, #d0e7ac, #abef3f);
   margin: 0;
   font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -10,7 +10,7 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-  background: #ffefba;
+  background: #27d3e7;
   padding: 2px 4px;
   border-radius: 4px;
 }
@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: #ff7e5f;
+  color: #30c763;
   text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -32,7 +32,7 @@ a:hover {
 }
 
 button {
-  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  background: linear-gradient(to right, #6eb3f9, #6fb7ff);
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -43,7 +43,7 @@ button {
 }
 
 button:hover {
-  background: linear-gradient(to right, #feb47b, #ff7e5f);
+  background: linear-gradient(to right, #feb47b, #71daf4);
   transform: scale(1.05);
 }
 
@@ -77,7 +77,7 @@ button:hover {
 
 .footer {
   background: rgba(0, 0, 0, 0.7);
-  color: #fff;
+  color: #ffffff;
   padding: 15px 0;
   text-align: center;
   border-radius: 15px 15px 0 0;
