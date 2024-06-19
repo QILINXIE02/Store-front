@@ -6,10 +6,12 @@ import Products from './components/Products';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Cart from './components/Cart';
+import Checkout from './components/Checkout';
 import { createTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/core';
 import { SnackbarProvider } from 'notistack';
 import Collapse from '@material-ui/core/Collapse';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const theme = createTheme({
   palette: {
@@ -45,11 +47,20 @@ function App() {
           }}
           TransitionComponent={Collapse}
         >
-          <Header show={handleShow} />
-          <Categories />
-          {showCartList && <Cart />}
-          <Products />
-          <Footer />
+          <Router>
+            <Header show={handleShow} />
+            <Routes>
+              <Route path="/" element={
+                <>
+                  <Categories />
+                  {showCartList && <Cart />}
+                  <Products />
+                </>
+              } />
+              <Route path="/checkout" element={<Checkout />} />
+            </Routes>
+            <Footer />
+          </Router>
         </SnackbarProvider>
       </ThemeProvider>
     </div>
