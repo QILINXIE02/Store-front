@@ -1,5 +1,3 @@
-// src/products.js
-
 const initialState = {
   products: [], // Initial list of all products
   activeProducts: [], // Products filtered based on active category

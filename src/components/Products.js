@@ -1,11 +1,9 @@
-// src/components/Products.js
-
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { getCategoryItems } from '../products';
 import { addToCart } from '../cartActions';
 import { reduceInventory } from '../products';
-
+import { Link } from 'react-router-dom';
 import { CardActionArea, CardActions, Card, CardContent, CardMedia, Button, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { useSnackbar } from 'notistack';
@@ -49,12 +47,12 @@ function Products({ category, products, getCategoryItems, addToCart, reduceInven
                         backgroundColor: 'white'
                     }}
                 >
-                    <CardMedia
-                        className={classes.media}
-                        image={`https://source.unsplash.com/random?${element.name}`}
-                        title={element.name}
-                    />
                     <CardActionArea>
+                        <CardMedia
+                            className={classes.media}
+                            image={`https://source.unsplash.com/random?${element.name}`}
+                            title={element.name}
+                        />
                         <CardContent>
                             <Typography gutterBottom variant="h5" component="h2">
                                 {element.name}
@@ -70,6 +68,9 @@ function Products({ category, products, getCategoryItems, addToCart, reduceInven
                     <CardActions>
                         <Button size="small" color="primary" onClick={() => handleClick(element)}>
                             Add To Cart
+                        </Button>
+                        <Button size="small" color="primary" component={Link} to={`/product/${element.id}`}>
+                            View Details
                         </Button>
                     </CardActions>
                 </Card>

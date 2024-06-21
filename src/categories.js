@@ -1,5 +1,3 @@
-// src/categoriesReducer.js
-
 const initialState = {
   categoriesList: [
     { name: 'Electronics', description: ': Summer limited-time sales' },

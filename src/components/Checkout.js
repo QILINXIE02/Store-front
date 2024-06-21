@@ -1,4 +1,3 @@
-// src/components/Checkout.js
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button, Typography, List, ListItem, ListItemText } from '@material-ui/core';
@@ -9,7 +8,6 @@ const Checkout = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
 
   const handleCheckout = () => {
-    // Implement checkout logic here
     dispatch(clearCart());
   };
 

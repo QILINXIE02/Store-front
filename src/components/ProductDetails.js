@@ -1,12 +1,13 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom'; // Use useNavigate instead of useHistory
 import { useSelector } from 'react-redux';
 import { Card, CardContent, CardMedia, Typography, Button } from '@material-ui/core';
 
 function ProductDetails() {
   const { productId } = useParams();
+  const navigate = useNavigate(); // Use navigate for navigation
   const product = useSelector(state =>
-    state.products.products.find(item => item.id === Number(productId))
+    state.products.activeProducts.find(item => item.id === Number(productId))
   );
 
   if (!product) {
@@ -27,17 +28,41 @@ function ProductDetails() {
           {product.name}
         </Typography>
         <Typography variant="body2" color="textSecondary" component="p">
-          {product.description}
+          Description: {product.description}
         </Typography>
         <Typography variant="body1" component="p">
           Price: ${product.price}
         </Typography>
         <Typography variant="body1" component="p">
-          In Stock: {product.instock}
+          In Stock: {product.inStock}
         </Typography>
-        <Button size="small" color="primary">
-          Add to Cart
+        <Button size="small" color="primary" onClick={() => navigate('/')}>
+          Back to Products
         </Button>
+        <Typography variant="h6" component="h4" style={{ marginTop: '20px' }}>
+          Related Items
+        </Typography>
+        <Typography variant="body2" color="textSecondary" component="p">
+          Suggestion 1
+        </Typography>
+        <Typography variant="body2" color="textSecondary" component="p">
+          Suggestion 2
+        </Typography>
+        <Typography variant="body2" color="textSecondary" component="p">
+          Suggestion 3
+        </Typography>
+        <Typography variant="h6" component="h4" style={{ marginTop: '20px' }}>
+          Product Details
+        </Typography>
+        <Typography variant="body2" color="textSecondary" component="p">
+          Product Specs.
+        </Typography>
+        <Typography variant="h6" component="h4" style={{ marginTop: '20px' }}>
+          User Reviews
+        </Typography>
+        <Typography variant="body2" color="textSecondary" component="p">
+          User reviews here.
+        </Typography>
       </CardContent>
     </Card>
   );
