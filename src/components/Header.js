@@ -1,32 +1,17 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Button, IconButton } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import { useSelector } from 'react-redux';
+import { AppBar, Toolbar, Typography, Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
-const useStyles = makeStyles((theme) => ({
-  title: {
-    flexGrow: 1,
-  },
-}));
-
 function Header({ show }) {
-  const classes = useStyles();
-  const cartItemCount = useSelector((state) => state.cart.cartItems.length);
-
   return (
     <AppBar position="static">
       <Toolbar>
-        <Typography variant="h4" className={classes.title}>
-          Our Store <Typography variant="h5"> Browse our Categories </Typography>
+        <Typography variant="h6" style={{ flexGrow: 1 }}>
+          My Store
         </Typography>
-        <Button color="inherit" onClick={show}>
-          Cart ({cartItemCount})
-        </Button>
-        <IconButton color="inherit" component={Link} to="/checkout">
-          <ShoppingCartIcon /><Typography>Checkout</Typography>
-        </IconButton>
+        <Button color="inherit" onClick={show}>Cart</Button>
+        <Button color="inherit" component={Link} to="/">Home</Button>
+        <Button color="inherit" component={Link} to="/checkout">Checkout</Button>
       </Toolbar>
     </AppBar>
   );

@@ -6,7 +6,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
-import ProductDetails from './components/ProductDetails'; // Import ProductDetails
+import ProductDetails from './components/ProductDetails';
 import { createTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/core';
 import { SnackbarProvider } from 'notistack';
@@ -58,7 +58,7 @@ function App() {
                 </>
               } />
               <Route path="/checkout" element={<Checkout />} />
-              <Route path="/product/:productId" element={<ProductDetails />} /> {/* Add ProductDetails route */}
+              <Route path="/product/:productId" element={<ProductDetails />} />
             </Routes>
             <Footer />
           </Router>
