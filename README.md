@@ -1,16 +1,37 @@
 # Virtual Store
 Virtual Store is an e-Commerce storefront application built with React and Redux. This project is divided into multiple phases.
 
-Day 3: 
-using live API: ![alt text](img/phase3.png)
+## Development Process and Milestones
+### Phase 4: Checkout & Detail Pages
+
+- Refactor the store to use the latest Redux design pattern (Redux Toolkit).
+- Add a cart checkout page.
+- Add a product details page.
+
+### Phase 3: Live Data
+
+- Connect the application to a live API.
+- Persist changes to products based on cart activity.
+
+![alt text](img/phase3.png)
 
 
-Day 2: 
+### Phase 2: Shopping Cart
+
+- Add items to a shopping cart.
+- Update quantities.
+- Remove items from the cart.
+- Show the cart in real-time on the UI.
 ![alt text](img/phase2.png)
 
-Day 1: 
-![alt text](img/phase1.png)
+ ### Phase 1: Application Setup
 
+- Basic React Application.
+- Redux State Management.
+- State managed in memory.
+- Material UI Components & Styling.
+
+![alt text](img/phase1.png)
 
 ### UML: 
 ![alt text](img/UML.png)
@@ -70,29 +91,3 @@ Our application powers an online storefront that allows users to browse product 
   - `activeCategoryReducer`: Manages the active category.
   - `productsReducer`: Manages the list of products.
 
-## Development Process and Milestones
-
-### Phase 1: Application Setup
-
-- Basic React Application.
-- Redux State Management.
-- State managed in memory.
-- Material UI Components & Styling.
-
-### Phase 2: Shopping Cart
-
-- Add items to a shopping cart.
-- Update quantities.
-- Remove items from the cart.
-- Show the cart in real-time on the UI.
-
-### Phase 3: Live Data
-
-- Connect the application to a live API.
-- Persist changes to products based on cart activity.
-
-### Phase 4: Checkout & Detail Pages
-
-- Refactor the store to use the latest Redux design pattern (Redux Toolkit).
-- Add a cart checkout page.
-- Add a product details page.
