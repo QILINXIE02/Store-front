@@ -25,7 +25,7 @@ function Header({ show }) {
           Cart ({cartItemCount})
         </Button>
         <IconButton color="inherit" component={Link} to="/checkout">
-          <ShoppingCartIcon />
+          <ShoppingCartIcon /><Typography>Checkout</Typography>
         </IconButton>
       </Toolbar>
     </AppBar>
