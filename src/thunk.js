@@ -1,5 +1,3 @@
-// src/thunk.js
-
 export const getRemoteData = () => {
   return async (dispatch) => {
     try {
